@@ -3,7 +3,7 @@
 	"uuid": "872f8d935d6149e6bc0f980a15d093e5",
 	"displayName": "均匀过渡导线",
 	"description": "提供 PCB 导线线宽均匀阶梯过渡功能的插件。支持 mm/mil 单位切换，自动连接两根不同宽度的导线。 / Plugin to create uniform stepped width transitions between two PCB tracks. Supports mm/mil units.",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"publisher": "LevenTao",
 	"engines": {
 		"eda": "^2.3.0"
@@ -18,11 +18,14 @@
 		"PCB",
 		"Routing",
 		"Transition",
-		"均匀过渡"
+		"均匀过渡",
+		"圆弧过渡"
 	],
 	"images": {
 		"logo": "./images/logo.png"
 	},
+	"homepage": "",
+	"bugs": "",
 	"activationEvents": {},
 	"entry": "./dist/index",
 	"dependentExtensions": {},
@@ -30,11 +33,11 @@
 		"pcb": [
 			{
 				"id": "UniformTransition",
-				"title": "均匀过渡",
+				"title": "均匀过渡导线",
 				"menuItems": [
 					{
 						"id": "CreateSteppedTransition",
-						"title": "创建阶梯过渡 (Stepped Transition)",
+						"title": "创建阶梯过渡",
 						"registerFn": "createSteppedTransition"
 					},
 					{

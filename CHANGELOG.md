@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0] - 2026-01-26
+
+### Added
+- **Arc Support**: Supports creating transitions between straight tracks (`Track`) and arcs (`ArcTrack/Arc`).
+- **Smart Multi-Selection**: Box select multiple segments. The plugin uses a **Dangling Endpoint** algorithm:
+    1. Identifies endpoints not connected to any other selected segment.
+    2. Finds the closest pair among these dangling endpoints.
+    3. Creates the transition between them.
+- **Connection Info Display**: The input dialog now shows exact coordinates and distance between the connection points.
+
+### Fixed
+- **Arc Width Scaling**: Arc width is now correctly read (requires x10 scaling from API).
+- **Arc Coordinate Handling**: Arc coordinates no longer incorrectly scaled (API returns correct units).
+- **Stability**: Replaced complex curve transitions with robust linear stepped transitions.
+
 ## [1.1.0] - 2026-01-13
 
 ### Changed
